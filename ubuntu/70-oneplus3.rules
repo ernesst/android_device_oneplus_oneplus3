@@ -247,3 +247,4 @@ ACTION=="change", DEVPATH=="/devices/virtual/switch/tri-state-key", SUBSYSTEM=="
 # Force the name of the wifi device to avoid network-manager confusion
 SUBSYSTEM=="net", ACTION=="add", KERNEL=="*", SUBSYSTEMS=="*", KERNELS=="0000:01:00.0", NAME="wlp1s0"
 ACTION=="add|remove", SUBSYSTEM=="net", RUN+="/usr/bin/python3 /system/halium/usr/share/wlan_restart/wlan_restart.py"
+#ACTION=="change", DEVPATH=="/sys/devices/soc/600000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/ieee80211/", SUBSYSTEM=="net", RUN+="/usr/bin/python3 /system/halium/usr/share/wlan_restart/network_restart.py"

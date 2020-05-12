@@ -132,7 +132,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml \
     $(LOCAL_PATH)/audio/listen_platform_info.xml:system/etc/listen_platform_info.xml \
-    $(LOCAL_PATH)/audio/mixer_paths_tasha.xml:system/etc/mixer_paths_tasha.xml \
+    $(LOCAL_PATH)/audio/mixer_paths_tasha.xml:system/etc/mixer_paths_tasha.xml
+   #$(LOCAL_PATH)/audio/aanc_tuning_mixer.txt:system/etc/aanc_tuning_mixer.txt
+	 #$(LOCAL_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
+
 
 PRODUCT_COPY_FILES += \
     $(TOPDIR)frameworks/av/services/audiopolicy/config/a2dp_audio_policy_configuration.xml:/system/etc/a2dp_audio_policy_configuration.xml \
@@ -178,8 +181,8 @@ PRODUCT_PACKAGES += \
     qdcm_calib_data_samsung_s6e3fa5_1080p_cmd_mode_dsi_panel.xml
 
 # Fingerprint sensor
-#PRODUCT_PACKAGES += \
-#    fingerprintd \
+PRODUCT_PACKAGES += \
+    fingerprintd
 #    OneplusPocketMode
 
 # For android_filesystem_config.h
@@ -334,7 +337,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini
-    
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/ubuntu/70-oneplus3.rules:system/halium/lib/udev/rules.d/70-android.rules \
     $(LOCAL_PATH)/ubuntu/70-oneplus3.rules:system/halium/usr/lib/lxc-android-config/70-android.rules \
@@ -413,7 +416,7 @@ MINIMEDIA_SENSORSERVER_DISABLE := 1
 #aethercastctl
 PRODUCT_PROPERTY_OVERRIDES += \
     ubuntu.widi.supported=1
-    
+
 # OP3 has a too small cache partition
 HALIUM_DATA_AS_CACHE := true
 

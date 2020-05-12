@@ -741,7 +741,6 @@ service ptt_socket_app /system/bin/ptt_socket_app -d
     user root
     group root
     oneshot
-    disabled
 
 service ptt_ffbm /system/bin/ptt_socket_app -f -d
     user root

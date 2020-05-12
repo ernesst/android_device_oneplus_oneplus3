@@ -454,3 +454,4 @@ vendor/lib/mediadrm/libwvdrmengine.so
 # Wifi
 bin/cnss_diag
 bin/cnss-daemon
+bin/ptt_socket_app
